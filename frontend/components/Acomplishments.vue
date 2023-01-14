@@ -74,7 +74,7 @@ const { sectionCss, sectionDividerCss, sectionTitleCss } = useGlobalCssProps({})
   font-size: 36px;
   line-height: 40px;
   letter-spacing: 0.01em;
-  color: #ffffff;
+  color: var(--colors-accent2);
   margin-bottom: 8px;
   @media screen and (max-width: $breakpoints-md) {
     font-size: 28px;
@@ -92,7 +92,7 @@ const { sectionCss, sectionDividerCss, sectionTitleCss } = useGlobalCssProps({})
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--colors-primary1);
   @media screen and (max-width: $breakpoints-md) {
     font-size: 16px;
     line-height: 20px;

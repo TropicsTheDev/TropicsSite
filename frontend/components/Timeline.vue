@@ -183,7 +183,7 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
   @media screen and (max-width: $breakpoints-sm) {
     margin-left: 32px;
     min-width: 120px;
-    background: #0e131f;
+    background: var(--colors-background2);
     padding: 4px;
     align-content: start;
     scroll-snap-align: start;
@@ -205,7 +205,7 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
   /* This gradient is different due to the size of the Title container, it must transition sooner to be visible on the text */
   background: linear-gradient(
     121.57deg,
-    #ffffff 10%,
+    var(--colors-primary1) 10%,
     rgba(255, 255, 255, 0.66) 30.15%
   );
   -webkit-background-clip: text;
@@ -241,7 +241,7 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
   font-size: 14px;
   line-height: 22px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--colors-primary2);
   padding-right: 16px;
   @media screen and (max-width: $breakpoints-md) {
     font-size: 12px;
