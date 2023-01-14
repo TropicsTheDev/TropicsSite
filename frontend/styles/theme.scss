@@ -1,0 +1,28 @@
+
+// Postcss plugin wasn't working :(
+// @custom-media --breakpoints-sm (max-width: 640px);
+// @custom-media --breakpoints-md (max-width: 760px);
+// @custom-media --breakpoints-lg (max-width: 1024px);
+// @custom-media --breakpoints-xl (max-width: 1280px);
+
+$breakpoints-sm: 640px;
+$breakpoints-md: 768px;
+$breakpoints-lg: 1024px;
+$breakpoints-xl: 1280px; 
+
+
+:root {
+  /*  Temp fonts */
+  --fonts-title: "Space Grotesk", sans-serif;
+  --fonts-main: "Space Grotesk", sans-serif;
+
+  /* Colors for layout */
+
+  --colors-primary1: hsl(204, 23.8%, 95.9%);
+  --colors-background1: #0f1624;
+  --colors-accent1: hsl(34.9, 98.6%, 72.9%);
+  --colors-button: hsl(205.1, 100%, 36.1%);
+  --colors-background2: hsl(232.7, 27.3%, 23.7%);
+
+  /* Breakpoints for responsive design */
+}

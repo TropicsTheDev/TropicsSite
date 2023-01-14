@@ -15,7 +15,6 @@ const props = defineProps({
   disabled: Boolean,
 });
 
-// only using one button CSS because both button classes rely on the same props
 const { buttonBackCss, buttonFrontCss } = useGlobalCssProps({
   alt: props.alt,
   form: props.form,

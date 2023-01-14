@@ -8,11 +8,11 @@
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     padding: 24px 48px 0;
     flex-direction: column;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     padding: var(--section_padding2);
     width: calc(100vw - 32px);
     flex-direction: column;
@@ -34,13 +34,13 @@
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
   padding: var(--section-title_padding1);
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     font-size: var(--section-title_font-size2);
     line-height: var(--section-title_line-height2);
     margin-bottom: 12px;
     padding: var(--section-title_padding2);
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     font-size: 32px;
     line-height: 40px;
     font-size: var(--section-title_font-size3);
@@ -58,13 +58,13 @@
   font-weight: 300;
   padding-bottom: 3.6rem;
   color: rgba(255, 255, 255, 0.5);
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     max-width: 670px;
     font-size: 20px;
     line-height: 32px;
     padding-bottom: 24px;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     font-size: 16px;
     line-height: 24px;
     padding-bottom: 16px;
@@ -78,11 +78,11 @@
   background-color: #fff;
   background: var(--section-divider_background);
   margin: var(--section-divider_margin);
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     width: 48px;
     height: 4px;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     width: 32px;
     height: 2px;
   }
@@ -94,12 +94,12 @@
   font-size: 18px;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.75);
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     max-width: 672px;
     font-size: 16px;
     line-height: 25px;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     font-size: 14px;
     line-height: 22px;
   }
@@ -134,7 +134,7 @@
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15),
       inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     margin-top: 24px;
     margin-bottom: 64px;
     padding: 16px 24px;
@@ -142,7 +142,7 @@
     font-size: 20px;
     line-height: 20px;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     margin-top: 16px;
     margin-bottom: 40px;
     padding: 8px 16px;
@@ -169,13 +169,13 @@
   position: relative;
   overflow: hidden;
   opacity: var(--button-back_opacity);
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     width: var(--button-back_width2);
     height: var(--button-back_height2);
     font-size: var(--button-back_font-size2);
     margin-bottom: var(--button-back_margin-bottom1);
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     width: 100%;
     height: 32px;
     font-size: 14px;
@@ -219,10 +219,10 @@
     box-shadow: inset 0px 2px 1px rgba(46, 49, 55, 0.15),
       inset 0px 0px 4px rgba(20, 20, 55, 0.3);
   }
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     font-size: var(--button-front_font-size2);
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     font-size: 14px;
   }
 }
@@ -238,10 +238,10 @@
     transform: scale(1.2);
     cursor: pointer;
   }
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     margin-left: var(--link-container_margin-left2);
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     margin-left: var(--link-container_margin-left3);
   }
 }
@@ -249,10 +249,10 @@
 .link-icon-img {
   display: flex;
   height: var(--link-icon-img_height1);
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     height: var(--link-icon-img_height2);
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     height: var(--link-icon-img_height3);
   }
 }

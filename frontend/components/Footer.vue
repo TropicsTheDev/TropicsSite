@@ -1,15 +1,33 @@
 <template>
-  <div></div>
+  <section class="footer-wrapper">
+    <ul class="link-list">
+      <div class="link-column">
+        <h4 class="link-title">Email</h4>
+        <a href="mailto:tropicstech@gmail.com" class="link-item"
+          >tropicstech@gmail.com</a
+        >
+      </div>
+    </ul>
+    <div class="social-icons-container">
+      <div class="company-container">
+        <p class="slogan">Always finding ways to grow</p>
+      </div>
+      <div class="social-container">
+        <a href="github.com" class="social-icons">
+          <i class="bx bxl-github" />
+        </a>
+        <a href="instagram.com" class="social-icons">
+          <i class="bx bxl-instagram" />
+        </a>
+        <a href="linkedin.com" class="social-icons">
+          <i class="bx bxl-linkedin-square" />
+        </a>
+      </div>
+    </div>
+  </section>
 </template>
 
-<script setup>
-// import theme from "~~/styles/jsStyles_old/themeyles_old/theme";
-
-
-// const cssProps = computed(() => ({
-//   ...theme,
-// }));
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .footer-wrapper {
@@ -18,7 +36,7 @@
   padding: 2rem 48px 40px;
   margin: 1rem auto;
   box-sizing: content-box;
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     padding: 0 16px 48px;
     width: calc(100vw - 32px);
   }
@@ -36,12 +54,12 @@
     color: #fff;
     left: 6px;
   }
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     font-size: 16px;
     line-height: 28px;
     display: flex;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     font-size: 8px;
     line-height: 14px;
     margin-bottom: 8px;
@@ -150,6 +168,19 @@
     font-size: 10px;
     line-height: 12px;
     margin-bottom: 8px;
+  }
+}
+
+.social-icons {
+  transition: 0.3s ease;
+  color: white;
+  border-radius: 50px;
+  padding: 8px;
+  font-size: 3rem;
+  &:hover {
+    background-color: #212d45;
+    transform: scale(1.2);
+    cursor: pointer;
   }
 }
 </style>

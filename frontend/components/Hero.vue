@@ -25,13 +25,13 @@ const { sectionTitleCss } = useGlobalCssProps({ main: true, center: true });
 <style lang="scss" scoped>
 .left-section {
   width: 100%;
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     width: 80%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
   }
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     width: 100%;
     display: flex;
     flex-direction: column;

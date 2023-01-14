@@ -48,7 +48,7 @@ const cssProps = computed(() => ({
   grid-column-gap: 2rem;
   padding: 1rem;
   padding-top: 2rem;
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(2, 60px);
@@ -65,7 +65,7 @@ const cssProps = computed(() => ({
   display: flex;
   flex-direction: row;
   align-content: center;
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     grid-area: 1 / 1 / 2 / 3;
   }
 }
@@ -73,7 +73,7 @@ const cssProps = computed(() => ({
   grid-area: 1 / 2 / 2 / 4;
   display: flex;
   justify-content: space-around;
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     grid-area: 2 / 2 / 3 / 5;
   }
 }
@@ -82,7 +82,7 @@ const cssProps = computed(() => ({
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     align-items: center;
     grid-area: 1 / 4 / 2 / 6;
   }
@@ -99,7 +99,7 @@ const cssProps = computed(() => ({
     opacity: 1;
     cursor: pointer;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     padding: 0.5rem;
   }
 }
@@ -120,7 +120,7 @@ const cssProps = computed(() => ({
   &:hover {
     color: #fff;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     padding: 0.4rem 0;
   }
   @media screen and (max-width: var(--breakpoints-md)) {
@@ -138,7 +138,7 @@ const cssProps = computed(() => ({
   &:hover {
     opacity: 1;
   }
-  @media screen and (max-width: var(--breakpoints-sm)) {
+  @media screen and (max-width: $breakpoints-sm) {
     margin: 2px 0 0 2px;
     width: 15px;
   }
