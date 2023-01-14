@@ -13,16 +13,19 @@ $breakpoints-xl: 1280px;
 
 :root {
   /*  Temp fonts */
-  --fonts-title: "Space Grotesk", sans-serif;
-  --fonts-main: "Space Grotesk", sans-serif;
+  --fonts-title: "Hermit", sans-serif;
+  --fonts-main: "Hermit", sans-serif;
 
   /* Colors for layout */
 
-  --colors-primary1: hsl(204, 23.8%, 95.9%);
-  --colors-background1: #0f1624;
-  --colors-accent1: hsl(34.9, 98.6%, 72.9%);
-  --colors-button: hsl(205.1, 100%, 36.1%);
-  --colors-background2: hsl(232.7, 27.3%, 23.7%);
+  --colors-primary1: #FEFBDA;
+  --colors-primary2: #DDD3E9;
+  --colors-background1: #2E213E;
+  --colors-accent1: #7851A9;
+  --colors-accent2: #F9ED6C;
+  --colors-accent3: #49AA83;
+  --colors-accent4: #F9966C;
+  --colors-background2: #53317D;
 
   /* Breakpoints for responsive design */
 }

@@ -139,7 +139,7 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
 <style lang="scss" scoped>
 .carousel-container {
   max-width: 1040px;
-  background: #0f1624;
+  background: var(--colors-background1);
   padding: 0rem;
   list-style: none;
   display: flex;
@@ -173,7 +173,7 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
 }
 
 .carousel-item {
-  background: #0f1624;
+  background: var(--colors-background2);
   border-radius: 3px;
   max-width: 196px;
   @media screen and (max-width: $breakpoints-md) {

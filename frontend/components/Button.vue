@@ -1,6 +1,11 @@
 <template>
   <div class="button-back" :disabled="disabled" :style="buttonBackCss">
-    <button class="button-front" :disabled="disabled" @click="$emit('buttonClicked')" :style="buttonFrontCss">
+    <button
+      class="button-front"
+      :disabled="disabled"
+      @click="$emit('buttonClicked')"
+      :style="buttonFrontCss"
+    >
       <slot />
     </button>
   </div>

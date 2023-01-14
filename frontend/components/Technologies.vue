@@ -118,7 +118,7 @@ const { sectionDividerCss } = useGlobalCssProps({ divider: true });
   font-size: 28px;
   line-height: 32px;
   letter-spacing: 0.02em;
-  color: #ffffff;
+  color: var(--colors-accent3);
   margin-bottom: 8px;
   @media screen and (max-width: $breakpoints-md) {
     font-size: 24px;
@@ -132,10 +132,10 @@ const { sectionDividerCss } = useGlobalCssProps({ divider: true });
   }
 }
 
-.list-paragragh {
+.list-paragraph {
   font-size: 18px;
   line-height: 30px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--colors-primary2);
   @media screen and (max-width: $breakpoints-md) {
     font-size: 16px;
     line-height: 28px;

@@ -42,7 +42,7 @@ const headerThreeCss = (title) => ({
 });
 const { sectionCss } = useGlobalCssProps({ nopadding: true });
 const { sectionTitleCss } = useGlobalCssProps({ main: true });
-const { sectionDividerCss } = useGlobalCssProps({});
+const { sectionDividerCss } = useGlobalCssProps({ });
 </script>
 
 <style lang="scss" scoped>
@@ -87,7 +87,7 @@ const { sectionDividerCss } = useGlobalCssProps({});
 .header-three {
   font-weight: 500;
   letter-spacing: 2px;
-  color: #9cc9e3;
+  color: var(--colors-accent2);
   padding: 0.5rem 0;
   font-size: var("--header-three_font-size");
 }
@@ -97,7 +97,7 @@ const { sectionDividerCss } = useGlobalCssProps({});
   height: 3px;
   margin: 20px auto;
   border: 0;
-  background: #d0bb57;
+  background: var(--colors-accent3);
 }
 
 .intro {
@@ -116,7 +116,7 @@ const { sectionDividerCss } = useGlobalCssProps({});
   color: #e4e6e7;
   font-style: 2rem;
   line-height: 24px;
-  text-align: justify;
+  text-align: left;
   @media screen and (max-width: $breakpoints-sm) {
     padding: 0.3rem;
   }

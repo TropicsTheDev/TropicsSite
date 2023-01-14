@@ -33,8 +33,8 @@ export default function useGlobalCssProps({
 
     sectionDividerCss: {
       "--section-divider_background": colorAlt
-        ? "linear-gradient(270deg, #F46737 0%, #945DD6 100%)"
-        : "linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)",
+        ? "linear-gradient(270deg, var(--colors-accent1) 0%, var(--colors-accent3) 37.5%)"
+        : "linear-gradient(270deg, var(--colors-accent3) 0%, var(--colors-accent1) 37.5%)",
       "--section-divider_margin": divider ? "4rem 0" : "",
     },
 
@@ -48,7 +48,7 @@ export default function useGlobalCssProps({
       "--button-back_opacity": disabled ? ".5" : "1",
       "--button-back_background": alt
         ? "linear-gradient(270deg, #ff622e 0%, #B133FF 100%)"
-        : "linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)",
+        : "linear-gradient(90deg, var(--colors-accent1) 0%, var(--colors-accent2) 100%)",
       "--button-back_margin": alt || form ? "0" : "0 0 80px",
       "--button-back_margin-bottom1": alt ? "0" : "64px",
       "--button-back_margin-bottom2": alt ? "0" : "32px",
@@ -57,7 +57,7 @@ export default function useGlobalCssProps({
     buttonFrontCss: {
       "--button-front_background": alt
         ? "linear-gradient(270deg, #F46737 0%, #945DD6 100%)"
-        : "linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)",
+        : "linear-gradient(90deg, var(--colors-accent2) 0%, var(--colors-accent1) 100%)",
       "--button-front_opacity": disabled ? ".5" : "1",
       "--button-front_font-size1": alt ? "20px" : "24px",
       "--button-front_font-size2": alt ? "20px" : "16px",

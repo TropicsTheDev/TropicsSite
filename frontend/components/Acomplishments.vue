@@ -48,7 +48,7 @@ const { sectionCss, sectionDividerCss, sectionTitleCss } = useGlobalCssProps({})
 }
 
 .box {
-  background: #212d45;
+  background: var(--colors-background2);
   border-radius: 12px;
   height: 144px;
   padding: 24px;

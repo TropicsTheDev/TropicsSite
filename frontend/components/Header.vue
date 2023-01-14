@@ -123,7 +123,7 @@ const cssProps = computed(() => ({
   @media screen and (max-width: $breakpoints-sm) {
     padding: 0.4rem 0;
   }
-  @media screen and (max-width: var(--breakpoints-md)) {
+  @media screen and (max-width: $breakpoints-md) {
     padding: 0;
   }
 }
