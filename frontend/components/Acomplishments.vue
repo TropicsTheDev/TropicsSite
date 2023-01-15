@@ -1,5 +1,6 @@
 <template>
   <section class="section" :style="sectionCss">
+    <div class="section-divider" :style="sectionDividerCss" />
     <h2 class="section-title" :style="sectionTitleCss">
       Personal Acomplishments
     </h2>
@@ -9,7 +10,6 @@
         <p class="box-text">{{ card.text }}</p>
       </div>
     </div>
-    <div class="section-divider" :style="sectionDividerCss" />
   </section>
 </template>
 
@@ -23,7 +23,8 @@ const data = ref([
   { number: 5000, text: "Github Stars" },
 ]);
 
-const { sectionCss, sectionDividerCss, sectionTitleCss } = useGlobalCssProps({});
+const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
+const { sectionDividerCss } = useGlobalCssProps({ divider: true });
 </script>
 
 <style lang="scss" scoped>

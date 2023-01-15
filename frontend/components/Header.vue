@@ -2,7 +2,7 @@
   <div class="container" :style="cssProps">
     <div class="div1">
       <NuxtLink to="/">
-        <span role="presentation" style="display: flex; align-items: center; color: white"
+        <span role="presentation" style="display: flex; align-items: center; color: var(--colors-accent2)"
           ><i class="bx bx-code-block" /><span class="span">Tropics</span></span
         >
       </NuxtLink>
@@ -59,6 +59,7 @@ const cssProps = computed(() => ({
 
 .span {
   font-size: 2rem;
+  color: var(--colors-accent2);
 }
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
@@ -92,7 +93,7 @@ const cssProps = computed(() => ({
 .nav-link {
   font-size: 2rem;
   line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--colors-primary1);
   transition: 0.4s ease;
   &:hover {
     color: #fff;
@@ -148,12 +149,13 @@ const cssProps = computed(() => ({
 
 .social-icons {
   transition: 0.3s ease;
-  color: white;
+  color: var(--colors-primary1);
   border-radius: 50px;
   padding: 8px;
   font-size: 3rem;
   &:hover {
-    background-color: #212d45;
+    background-color: var(--colors-accent1);
+    color: var(--colors-accent2);
     transform: scale(1.2);
     cursor: pointer;
   }

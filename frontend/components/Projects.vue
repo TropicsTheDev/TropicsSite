@@ -70,7 +70,7 @@ const { sectionDividerCss } = useGlobalCssProps({ });
 
 .blog-card {
   border-radius: 10px;
-  box-shadow: 3px 3px 20px rgba(80, 78, 78, 0.5);
+  box-shadow: 3px 3px 20px rgba(121, 81, 169, 0.5);
   text-align: center;
   width: 400px;
   @media screen and (max-width: $breakpoints-sm) {
@@ -82,6 +82,7 @@ const { sectionDividerCss } = useGlobalCssProps({ });
   text-align: center;
   z-index: 20;
   width: 100%;
+  color: var(--colors-accent4);
 }
 
 .header-three {
@@ -113,7 +114,7 @@ const { sectionDividerCss } = useGlobalCssProps({ });
 .card-info {
   width: 100%;
   padding: 0 50px;
-  color: #e4e6e7;
+  color: var(--colors-primary2);
   font-style: 2rem;
   line-height: 24px;
   text-align: left;
@@ -131,14 +132,15 @@ const { sectionDividerCss } = useGlobalCssProps({ });
 }
 
 .external-links {
-  color: #d4c0c0;
+  color: var(--colors-primary2);
   font-size: 1.6rem;
   padding: 1rem 1.5rem;
-  background: #6b3030;
+  background: var(--colors-background2);
   border-radius: 15px;
   transition: 0.5s;
   &:hover {
-    background: #801414;
+    background: var(--colors-accent1);
+    color: var(--colors-accent2)
   }
 }
 
@@ -148,7 +150,7 @@ const { sectionDividerCss } = useGlobalCssProps({ });
   padding: 2rem;
 }
 .tag {
-  color: #d8bfbf;
+  color: car(--colors-primary1);
   font-size: 1.5rem;
 }
 </style>

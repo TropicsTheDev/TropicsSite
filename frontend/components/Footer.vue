@@ -45,13 +45,13 @@
 .link-item {
   font-size: 18px;
   line-height: 30px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(254, 251, 218, 0.75);
   margin-bottom: 16px;
   transition: 0.3s ease;
   position: relative;
   left: 0;
   &:hover {
-    color: #fff;
+    color: var(--colors-accent2);
     left: 6px;
   }
   @media screen and (max-width: $breakpoints-md) {
@@ -102,7 +102,7 @@
 }
 
 .slogan {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(249, 237, 108, 0.5);
   min-width: 280px;
   letter-spacing: 0.02em;
   font-size: 18px;
@@ -173,12 +173,13 @@
 
 .social-icons {
   transition: 0.3s ease;
-  color: white;
+  color: var(--colors-primary1);
   border-radius: 50px;
   padding: 8px;
   font-size: 3rem;
   &:hover {
-    background-color: #212d45;
+    background-color: var(--colors-accent1);
+    color: var(--colors-accent2);
     transform: scale(1.2);
     cursor: pointer;
   }

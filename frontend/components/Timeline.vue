@@ -1,5 +1,6 @@
 <template>
   <section class="section" :style="sectionCss">
+    <div class="section-divider" :style="sectionDividerCss" />
     <h2 class="section-title" :style="sectionTitleCss">About Me</h2>
     <section class="section-text">All about me and what I do</section>
     <ul class="carousel-container" ref="carouselRef" @scroll="handleScroll">
@@ -133,7 +134,8 @@ const carouselButtonCss = ({ active, index }) => ({
   "--carousel-button_transform": active === index ? "scale(1.6)" : "scale(1)",
 });
 
-const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
+const { sectionCss, sectionTitleCss, } = useGlobalCssProps({});
+const { sectionDividerCss } = useGlobalCssProps({ divider: true });
 </script>
 
 <style lang="scss" scoped>
@@ -174,10 +176,12 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
 
 .carousel-item {
   background: var(--colors-background2);
+  padding: 1rem;
   border-radius: 3px;
   max-width: 196px;
   @media screen and (max-width: $breakpoints-md) {
     max-width: 124px;
+    margin-left: 16px;
   }
 
   @media screen and (max-width: $breakpoints-sm) {
@@ -193,6 +197,10 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
     height: fit-content;
 
     opacity: var(--carousel-item_opacity);
+  }
+
+  &:hover {
+    background: var(--colors-accent1);
   }
 }
 
@@ -211,7 +219,7 @@ const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
-  @media ($breakpoints-md) {
+  @media (max-width: $breakpoints-md) {
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 4px;
