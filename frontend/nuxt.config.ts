@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
+    "@/styles/fonts/Hermit/stylesheet.css",
     "@/styles/globals.css",
     "@/styles/components.scss",
     "boxicons/css/boxicons.min.css",
@@ -27,7 +28,7 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/styles/theme.scss"; @import "@/styles/fonts/Hermit/stylesheet.css";',
+          additionalData: '@import "@/styles/theme.scss";',
         },
       },
     },
