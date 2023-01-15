@@ -175,7 +175,7 @@ const { sectionDividerCss } = useGlobalCssProps({ divider: true });
 }
 
 .carousel-item {
-  background: var(--colors-background2);
+  background: var(--colors-background1);
   padding: 1rem;
   border-radius: 3px;
   max-width: 196px;
@@ -187,7 +187,6 @@ const { sectionDividerCss } = useGlobalCssProps({ divider: true });
   @media screen and (max-width: $breakpoints-sm) {
     margin-left: 32px;
     min-width: 120px;
-    background: var(--colors-background2);
     padding: 4px;
     align-content: start;
     scroll-snap-align: start;

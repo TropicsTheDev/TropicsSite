@@ -3,10 +3,10 @@
 
 
 @font-face {
-    font-family: 'hermitbold';
+    font-family: 'Hermit';
     src: url('hermit-bold-webfont.woff2') format('woff2'),
          url('hermit-bold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: bold;
     font-style: normal;
 
 }
@@ -15,11 +15,11 @@
 
 
 @font-face {
-    font-family: 'hermitbolditalic';
+    font-family: 'Hermit';
     src: url('hermit-bolditalic-webfont.woff2') format('woff2'),
          url('hermit-bolditalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: bold;
+    font-style: italic;
 
 }
 
@@ -27,10 +27,10 @@
 
 
 @font-face {
-    font-family: 'hermitlight';
+    font-family: 'Hermit';
     src: url('hermit-light-webfont.woff2') format('woff2'),
          url('hermit-light-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: lighter;
     font-style: normal;
 
 }
@@ -39,11 +39,11 @@
 
 
 @font-face {
-    font-family: 'hermitlightitalic';
+    font-family: 'Hermit';
     src: url('hermit-lightitalic-webfont.woff2') format('woff2'),
          url('hermit-lightitalic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-weight: lighter;
+    font-style: italic;
 
 }
 
@@ -51,7 +51,7 @@
 
 
 @font-face {
-    font-family: 'hermitregular';
+    font-family: 'Hermit';
     src: url('hermit-regular-webfont.woff2') format('woff2'),
          url('hermit-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -63,10 +63,10 @@
 
 
 @font-face {
-    font-family: 'hermitregularitalic';
+    font-family: 'Hermit';
     src: url('hermit-regularitalic-webfont.woff2') format('woff2'),
          url('hermit-regularitalic-webfont.woff') format('woff');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
 
 }
