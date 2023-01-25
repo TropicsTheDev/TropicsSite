@@ -7,45 +7,46 @@
       development!
     </p>
     <ul class="list">
-      <li class="list-item">
-        <div class="list-container">
-          <h4 class="list-title">
-            React
-            <picture
-              ><i class="bx bxl-react" style="font-size: 3rem"
-            /></picture>
-          </h4>
-          <p class="list-paragraph">Experienced with ReactJS</p>
-        </div>
-      </li>
-      <li class="list-item">
-        <div class="list-container">
-          <h4 class="list-title">
-            Vue
-            <picture>
-              <i class="bx bxl-vuejs" style="font-size: 3rem" />
-            </picture>
-          </h4>
-          <p class="list-paragraph">Experienced with VueJS</p>
-        </div>
-      </li>
-      <li class="list-item">
-        <div class="list-container">
-          <h4 class="list-title">
-            Node
-            <picture
-              ><i class="bx bxl-nodejs" style="font-size: 3rem"
-            /></picture>
-          </h4>
-          <p class="list-paragraph">Experienced with NodeJS</p>
-        </div>
-      </li>
+      <template v-if="data"
+        ><li class="list-item" v-for="skill in data.allSkills" :key="skill._id">
+          <div class="list-container">
+            <h4 class="list-title">
+              {{ skill.title }}
+              <picture
+                ><i :class="`bx bxl-${skill.icon}`" style="font-size: 3rem"
+              /></picture>
+            </h4>
+            <p class="list-paragraph">{{ skill.description }}</p>
+          </div>
+        </li>
+      </template>
+      <template v-if="fetching">
+        <h3>Loading skills...</h3>
+        <progress />
+      </template>
+      <template v-if="error">
+        <h3>Couldn't load skills 😭</h3>
+      </template>
     </ul>
   </section>
 </template>
 
 <script setup>
 import useGlobalCssProps from "@/styles/useGlobalCssProps";
+import { gql, useQuery } from "@urql/vue";
+
+const { data, fetching, error } = useQuery({
+  query: gql`
+    query {
+      allSkills {
+        _id
+        title
+        description
+        icon
+      }
+    }
+  `,
+});
 
 const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
 const { sectionDividerCss } = useGlobalCssProps({ divider: true });
@@ -114,6 +115,8 @@ const { sectionDividerCss } = useGlobalCssProps({ divider: true });
 }
 
 .list-title {
+  display: flex;
+  align-items: center;
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;

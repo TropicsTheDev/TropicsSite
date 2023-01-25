@@ -6,7 +6,7 @@
   <Projects />
   <Technologies />
   <Timeline />
-  <Acomplishments />
+  <!-- <Acomplishments /> -->
 </template>
 
 <script setup>

@@ -1,13 +1,13 @@
 <template>
-  <section class="section" :style="sectionCss">
+  <section class="section" id="about" :style="sectionCss">
     <div class="section-divider" :style="sectionDividerCss" />
     <h2 class="section-title" :style="sectionTitleCss">About Me</h2>
-    <section class="section-text">All about me and what I do</section>
+    <section class="section-text">A bit about me and my journy!</section>
     <ul class="carousel-container" ref="carouselRef" @scroll="handleScroll">
-      <template v-if="totalCarouselCount > 0">
+      <template v-if="data.allTimelineData !== undefined">
         <li
           class="carousel-mobile-scroll-node"
-          v-for="(item, index) in TimeLineData"
+          v-for="(item, index) in orderedTimeline"
           :key="index"
           :style="
             carouselMobileContainerScrollNodeCss({
@@ -57,15 +57,22 @@
                 </defs>
               </svg>
             </h4>
-            <p class="carousel-item-text">{{ item.text }}</p>
+            <p class="carousel-item-text">{{ item.description }}</p>
           </div>
         </li>
+      </template>
+      <template v-else-if="fetching">
+        <h3>Loading timeline...</h3>
+        <progress />
+      </template>
+      <template v-else-if="error">
+        <h3>Couldn't load error 😭</h3>
       </template>
     </ul>
     <div class="carousel-buttons">
       <button
         class="carousel-button"
-        v-for="(item, index) in TimeLineData"
+        v-for="(item, index) in orderedTimeline"
         :key="index"
         :style="carouselButtonCss({ active: activeItem, index })"
         @click="(event) => handleClick(event, index)"
@@ -77,10 +84,26 @@
 </template>
 
 <script setup>
-import { TimeLineData } from "@/constants/constants";
-import useGlobalCssProps from "~~/styles/useGlobalCssProps";
+import useGlobalCssProps from "@/styles/useGlobalCssProps";
+import { gql, useQuery } from "@urql/vue";
 
-const totalCarouselCount = TimeLineData.length;
+const { data, fetching, error } = await useQuery({
+  query: gql`
+    query {
+      allTimelineData {
+        _id
+        year
+        description
+      }
+    }
+  `,
+});
+
+const totalCarouselCount = data.value.allTimelineData.length;
+
+const orderedTimeline = computed(() =>
+  data.value.allTimelineData.sort((a, b) => a.year - b.year)
+);
 
 const activeItem = ref(0);
 const carouselRef = ref(null);
@@ -90,9 +113,7 @@ function handleClick(event, index) {
   console.log("clicked", { event, index, carouselRef });
   if (carouselRef.value) {
     const scrollLeft = Math.floor(
-      carouselRef.value.scrollWidth *
-        0.7 *
-        (index / TimeLineData.length)
+      carouselRef.value.scrollWidth * 0.7 * (index / totalCarouselCount)
     );
 
     scroll(carouselRef.value, scrollLeft);
@@ -106,9 +127,8 @@ function scroll(node, left) {
 function handleScroll() {
   if (carouselRef.value) {
     const index = Math.round(
-      (carouselRef.value.scrollLeft /
-        (carouselRef.value.scrollWidth * 0.7)) *
-        TimeLineData.length
+      (carouselRef.value.scrollLeft / (carouselRef.value.scrollWidth * 0.7)) *
+        totalCarouselCount
     );
 
     activeItem.value = index;
@@ -134,7 +154,7 @@ const carouselButtonCss = ({ active, index }) => ({
   "--carousel-button_transform": active === index ? "scale(1.6)" : "scale(1)",
 });
 
-const { sectionCss, sectionTitleCss, } = useGlobalCssProps({});
+const { sectionCss, sectionTitleCss } = useGlobalCssProps({});
 const { sectionDividerCss } = useGlobalCssProps({ divider: true });
 </script>
 
@@ -145,7 +165,7 @@ const { sectionDividerCss } = useGlobalCssProps({ divider: true });
   padding: 0rem;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   /* overflow-x: hidden; */
   margin-left: 32px;
   &:first-of-type {

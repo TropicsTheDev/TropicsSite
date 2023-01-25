@@ -12,10 +12,9 @@
     "sass": "^1.57.1"
   },
   "dependencies": {
-    "boxicons": "^2.1.4"
-  },
-  "engines" : { 
-    "npm" : ">=8.0.0 <9.0.0",
-    "node" : ">=16.0.0 <17.0.0"
+    "@urql/vue": "^1.0.4",
+    "boxicons": "^2.1.4",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6"
   }
 }

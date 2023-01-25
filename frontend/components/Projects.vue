@@ -3,8 +3,9 @@
     <div class="section-divider" :style="sectionDividerCss" />
     <h2 class="section-title" :style="sectionTitleCss">Projects</h2>
     <section class="grid-container">
-      <div class="blog-card" v-for="project in projects" :key="project.id">
-        <img class="img" :src="project.image" :alt="project.title" />
+      <template v-if="data">
+        <div class="blog-card" v-for="project in data.allProjects" :key="project._id">
+        <img class="img" :src="project.image.asset.url" :alt="project.title" />
         <div class="title-content">
           <h3 class="header-three" :style="headerThreeCss(project.title)">
             {{ project.title }}
@@ -29,20 +30,49 @@
           </ul>
         </div>
       </div>
+      </template>
+      <template v-if="fetching">
+        <h3>Loading projects...</h3>
+        <progress />
+      </template>
+      <template v-if="error">
+        <h3>Couldn't load projects 😭</h3>
+      </template>
     </section>
   </section>
 </template>
 
 <script setup>
 import useGlobalCssProps from "@/styles/useGlobalCssProps";
-import { projects } from "@/constants/constants";
+import { gql, useQuery } from "@urql/vue";
+
+const {
+  data,
+  fetching,
+  error,
+} = useQuery({
+  query: gql`
+    query {
+      allProjects {
+        _id
+        description
+        image {
+          asset {
+            url
+          }
+        }
+        tags
+      }
+    }
+  `,
+});
 
 const headerThreeCss = (title) => ({
   "--header-three_font-size": title ? "3rem" : "2rem",
 });
 const { sectionCss } = useGlobalCssProps({ nopadding: true });
 const { sectionTitleCss } = useGlobalCssProps({ main: true });
-const { sectionDividerCss } = useGlobalCssProps({ });
+const { sectionDividerCss } = useGlobalCssProps({});
 </script>
 
 <style lang="scss" scoped>
@@ -61,8 +91,6 @@ const { sectionDividerCss } = useGlobalCssProps({ });
   column-gap: 2rem;
   row-gap: 3rem;
   @media screen and (max-width: $breakpoints-sm) {
-    display: flex;
-    flex-direction: column;
     padding: 2rem;
     padding-bottom: 0;
   }
@@ -114,6 +142,7 @@ const { sectionDividerCss } = useGlobalCssProps({ });
 .card-info {
   width: 100%;
   padding: 0 50px;
+  padding-bottom: 2.5rem;
   color: var(--colors-primary2);
   font-style: 2rem;
   line-height: 24px;
@@ -140,7 +169,7 @@ const { sectionDividerCss } = useGlobalCssProps({ });
   transition: 0.5s;
   &:hover {
     background: var(--colors-accent1);
-    color: var(--colors-accent2)
+    color: var(--colors-accent2);
   }
 }
 
