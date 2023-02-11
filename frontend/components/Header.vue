@@ -19,13 +19,13 @@
       </li>
     </ul>
     <div class="div3">
-      <a href="github.com" class="social-icons">
+      <a href="https://github.com/TropicsTheDev" class="social-icons">
         <i class="bx bxl-github" />
       </a>
-      <a href="instagram.com" class="social-icons">
+      <a href="https://www.instagram.com/dougie_mt/" class="social-icons">
         <i class="bx bxl-instagram" />
       </a>
-      <a href="linkedin.com" class="social-icons">
+      <a href="https://www.linkedin.com/in/douglas-townsend-3a3997183/" class="social-icons">
         <i class="bx bxl-linkedin-square" />
       </a>
     </div>
