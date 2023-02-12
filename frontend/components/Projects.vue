@@ -62,6 +62,8 @@ const {
           }
         }
         tags
+        source
+        visit
       }
     }
   `,
