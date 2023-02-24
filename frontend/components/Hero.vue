@@ -8,9 +8,6 @@
       <p class="section-text">
         Building epic apps with JavaScript
       </p>
-      <Button @buttonClicked="() => (window.location = 'https://google.com')"
-        >Learn More</Button
-      >
     </div>
   </section>
 </template>
