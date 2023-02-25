@@ -50,11 +50,12 @@ const {
   data,
   fetching,
   error,
-} = useQuery({
+} = await useQuery({
   query: gql`
     query {
       allProjects {
         _id
+        title
         description
         image {
           asset {
