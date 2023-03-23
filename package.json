@@ -1,0 +1,27 @@
+{
+  "name": "tropicssite",
+  "version": "1.0.0",
+  "description": "portfolio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "(cd ./frontend && npm install)",
+    "build": "(cd ./frontend && npm run build",
+    "start": "(cd ./frontend && node .output/server/index.mjs)"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TropicsTheDev/TropicsSite.git"
+  },
+  "keywords": [
+    "portfolio",
+    "developer",
+    "vue"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TropicsTheDev/TropicsSite/issues"
+  },
+  "homepage": "https://github.com/TropicsTheDev/TropicsSite#readme"
+}
