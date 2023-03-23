@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "cd ./frontend && npm install",
+    "install": "cd ./frontend; npm install",
     "heroku-postbuild": "npm run build",
-    "build": "cd ./frontend && npm run build",
-    "start": "cd ./frontend && node .output/server/index.mjs"
+    "build": "cd ./frontend; npm run build",
+    "start": "cd ./frontend; node .output/server/index.mjs"
   },
   "repository": {
     "type": "git",
